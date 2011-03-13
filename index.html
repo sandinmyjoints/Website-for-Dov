@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description"
+	content="Home page for Dov Gordon: cryptologist with a PhD from the University of Maryland.">
+	<meta name="keywords"
+	content="Dov Gordon, Samuel Gordon, cryptology, cryptography, phd, computer science">
+
+	<link rel="stylesheet" type="text/css" media="all" href="media/reset.css">
+	<link rel="stylesheet" type="text/css" media="all" href="media/text.css">
+	<link rel="stylesheet" type="text/css" media="all" href="media/style.css" >
+	<link rel="stylesheet" type="text/css" media="all" href="media/jquery-ui-1.8.10.custom.css">
+	
+	<title> Dov Gordon - Cryptologist </title>
+	
+</head>
+
+<body>
+<div id="header">
+	<div id="header_info">
+		<h1> Dov Gordon </h1>
+		<h2 id="email"><i>mylastname</i>@cs.maryland.edu</h2>
+		<p>Department of Computer Science</p>
+		<p>A.V. Williams  Building</p>
+		<p>University of Maryland</p>
+		<p>College Park, MD 20742</p>
+	</div>
+	<div id="header_photo">
+		<img src="media/images/dov1.jpg" alt="Dov Gordon" width="242" height="180">
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="content">
+
+<h3 name="about" class="clear">About Me</h3>
+I am currently a postdoc at Columbia University with Tal Malkin, as a recipient of the <a href="http://cifellows.org/">Computing Innovation Fellowship</a>. I received my PhD in July 2010 with <a href="http://www.cs.umd.edu/%7Ejkatz/">Jonathan Katz</a> in the computer science department at the University of Maryland. Here's my <a href="http://www.cs.umd.edu/~gordon/cv_1010.pdf" class="pdf">curriculum vitae (PDF)</a>.
+
+<p>
+
+<h3 name="interests">Research Interests</h3>
+My thesis <a href="http://www.cs.umd.edu/~gordon/thesis.pdf">(PDF)</a> is on the subject of fairness in secure computation. I am also interested in practical applications of secure computation, especially in modern computing environments. Most recently I am also researching the construction of new cryptographic primitives, and exploring the use of new hardness assumptions. 
+
+<h3 name="publications">Publications</h3>
+
+<div id="publications">
+<div id="accordion">
+		
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		A Group Signature Scheme From Lattice Assumptions
+		</a>
+		</span>
+	
+		<span class="authors">
+			Dov Gordon, Jonathan Katz, and Vinod Vaikuntanathan
+		</span>
+		
+		<span class="venue">
+			Asiacrypt 2010
+		</span>
+	</div>
+	<div class="abstract">
+		A seminal result of Cleve (STOC '86) is that, in general, complete fairness is impossible to achieve in two-party computation. In light of this, various techniques for obtaining partial fairness have been suggested in the literature. We propose a definition of partial fairness within the standard real-/ideal-world paradigm that addresses deficiencies of prior definitions. We also show broad feasibility results with respect to our definition: partial fairness is possible for any (randomized) functionality $f:X \times Y \rightarrow Z^1 \times Z^2$ at least one of whose domains or ranges is polynomial in size. Our protocols are always private, and when one of the domains has polynomial size our protocols also simultaneously achieve the usual notion of security with abort. In contrast to some prior work, we rely on standard assumptions only. Presented at <a href="http://www.spms.ntu.edu.sg/Asiacrypt2010/">Asiacrypt 2010</a>.
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		Partial Fairness in Secure Two-Party Computation
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon and Jonathan Katz
+		</span>
+		<span class="venue">
+			Eurocrypt 2010
+		</span>
+	</div>
+	<div class="abstract">
+		Another abstract <span class="pdf"> 
+			(<a href="http://eprint.iacr.org/2008/206.pdf">PDF</a>)
+			<a href="http://crypto.rd.francetelecom.com/events/eurocrypt2010/">Eurocrypt 2010</a>
+		</span>
+		
+	</div>
+</div> <!-- end accordion div -->
+</div> <!-- end publications div -->
+
+
+<div id="Teaching" name="teaching">
+<h3>Teaching</h3>
+<ul>
+<li><a href="http://www.cs.umd.edu/~gordon/ysp">MATH 199</a> Math, Game Theory and the Theory of Games</li>
+</ul>
+</div>
+
+</div> <!-- end content -->
+
+<div id="footer"> 
+			Last updated: <span id="last_update"></span>
+
+	<span style="float: right">
+		<a href="">Contact Dov</a>
+	</span>
+</div> <!-- end footer -->
+
+<script src="media/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="media/jquery-ui-1.8.10.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#accordion").accordion({
+		collapsible: true,
+		header: 'div.publication',
+		alwaysOpen: false,
+		active: false
+	});
+});
+
+
+var username = "dov";
+var hostname = "cs.maryland.edu";
+var email = username + "@" + hostname;
+document.getElementById("email").innerHTML = '<a href="mailto:' + email + '">' + email + '</a>'
+
+var lmd = new Date(Date.parse(document.lastModified));
+document.getElementById("last_update").innerHTML = lmd.toDateString();
+</script>
+
+</body>
+</html>
