@@ -35,15 +35,16 @@
 
 <div id="content">
 
-<h3 name="about" class="clear">About Me</h3>
+<h3 class="clear">About Me</h3>
 I am currently a postdoc at Columbia University with Tal Malkin, as a recipient of the <a href="http://cifellows.org/">Computing Innovation Fellowship</a>. I received my PhD in July 2010 with <a href="http://www.cs.umd.edu/%7Ejkatz/">Jonathan Katz</a> in the computer science department at the University of Maryland. Here's my <a href="http://www.cs.umd.edu/~gordon/cv_1010.pdf" class="pdf">curriculum vitae (PDF)</a>.
 
 <p>
 
-<h3 name="interests">Research Interests</h3>
+<h3>Research Interests</h3>
 My thesis <a href="http://www.cs.umd.edu/~gordon/thesis.pdf">(PDF)</a> is on the subject of fairness in secure computation. I am also interested in practical applications of secure computation, especially in modern computing environments. Most recently I am also researching the construction of new cryptographic primitives, and exploring the use of new hardness assumptions. 
 
-<h3 name="publications">Publications</h3>
+<h3>Publications</h3>
+<p><i>Click to read the abstract</i>.</p>
 
 <div id="publications">
 <div id="accordion">
@@ -81,17 +82,245 @@ My thesis <a href="http://www.cs.umd.edu/~gordon/thesis.pdf">(PDF)</a> is on the
 		</span>
 	</div>
 	<div class="abstract">
-		Another abstract <span class="pdf"> 
+		A seminal result of Cleve (STOC '86) is that, in general, \emph{complete} fairness is impossible to achieve
+		in two-party computation. In light of this, various techniques for
+		obtaining \emph{partial} fairness have been suggested in the
+		literature. We propose a definition of partial fairness within the
+		standard real-/ideal-world paradigm that addresses deficiencies of
+		prior definitions. We also show broad feasibility results with
+		respect to our definition:~partial fairness is possible for any
+		(randomized) functionality $f:X \times Y \rightarrow Z_1 \times Z_2$
+		at least one of whose domains or ranges is polynomial in size. Our
+		protocols are always private, and when one of the domains has
+		polynomial size our protocols also simultaneously achieve the usual
+		notion of security with abort. In contrast to some prior work, we
+		rely on standard assumptions only.
+
+		We also show that, as far as general feasibility is concerned, our results are \emph{optimal} (with respect to our definition).
+		Specifically, there exist functions with super-polynomial domain and range for which it is impossible to achieve our definition. <span class="pdf"> 
 			(<a href="http://eprint.iacr.org/2008/206.pdf">PDF</a>)
 			<a href="http://crypto.rd.francetelecom.com/events/eurocrypt2010/">Eurocrypt 2010</a>
+		</span>	
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		On Complete Primitives for Fairness
+		</a>
 		</span>
+		<span class="authors">
+			Dov Gordon, Yuval Ishai, Tal Moran, Rafail Ostrovsky and Amit Sahai
+		</span>
+		<span class="venue">
+			TCC 2010
+		</span>
+	</div>
+	<div class="abstract">
+		For secure two-party and multi-party computation with abort,
+		classification of which primitives are {\em complete} has been
+		extensively studied in the literature. However, for \emph{fair} secure
+		computation, where (roughly speaking) either all parties learn the
+		output or none do, the question of complete primitives has remained
+		largely unstudied.
+
+
+		In this work, we initiate a rigorous study of completeness for
+		primitives that allow fair computation.  We show the following
+		results:
+
+		- \textbf{No ``short'' primitive is complete for fairness.}
+		In surprising contrast to other notions of security for secure
+		two-party computation, we show that for fair secure two-party
+		computation, no primitive of size $O(\log k)$ is complete, where $k$
+		is a security parameter.  This is the case even if we can enforce
+		parallelism in calls to the primitives (i.e., the adversary does not
+		get output from any primitive in a parallel call until it sends input
+		to all of them).  This negative result holds regardless of any
+		computational assumptions.
+
+		- \textbf{Coin Flipping and Simultaneous Broadcast are not
+		complete for fairness.}  The above result rules out the completeness
+		of two natural candidates: coin flipping (for any number of coins) and
+		simultaneous broadcast (for messages of arbitrary length).
+
+
+		- \textbf{Positive results.}  To complement the negative results,
+		we exhibit a $k$-bit primitive that \emph{is} complete for two-party
+		fair secure computation.  This primitive implements a ``fair
+		reconstruction'' procedure for a secret sharing scheme with some
+		robustness properties.  We show how to generalize this result to the
+		multi-party setting.
+
+
+		- \textbf{Fairness combiners.}  We also introduce the question of
+		constructing a protocol for fair secure computation from primitives
+		that may be faulty.  We show a simple functionality that is complete
+		for two-party fair computation when the majority of its instances are
+		honest. On the flip side, we show that this result is tight: no
+		functionality is complete for fairness if half (or more) of the
+		instances can be malicious.	
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		On the Round Complexity of Zero-Knowledge Proofs Based on One-Way Permutations
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon, Hoeteck Wee, David Xiao, and Arkady Yerukhimovich
+		</span>
+		<span class="venue">
+			Latincrypt 2010
+		</span>
+	</div>
+	<div class="abstract">
+		 We consider the following problem: can we construct constant-round
+		 zero-knowledge proofs (with negligible soundness) for $\NP$ assuming
+		 only the existence of one-way permutations? We answer the question
+		 in the negative for fully black-box constructions (using only
+		 black-box access to both the underlying primitive and the cheating
+		 verifier) that satisfy a natural restriction on the ``adaptivity''
+		 of the simulator's queries.  Specifically, we show that only languages in $\coAM$ have
+		 constant-round zero-knowledge proofs of this kind.	
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		Authenticated Broadcast with a Partially Compromised Public-Key Infrastructure
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon, Jonathan Katz, Ranjit Kumaresan and Arkady Yerukhimovich
+		</span>
+		<span class="venue">
+			Symposium on Stabilization, Safety and Security of Distributed Systems, 2010
+		</span>
+	</div>
+	<div class="abstract">
+		Given a public-key
+		infrastructure (PKI) and digital signatures, it is possible to construct
+		broadcast protocols tolerating any number of corrupted parties.
+		Almost all existing protocols, however, do not distinguish between \emph{corrupted} parties (who do not follow the protocol),
+		and \emph{honest} parties whose secret (signing) keys have been compromised (but who continue to behave honestly).
+		We explore conditions under which it is possible to construct
+		broadcast protocols that still provide the usual guarantees (i.e., validity/agreement) to the latter.
+
+		Consider a network of $n$ parties, where an adversary
+		has compromised the secret keys of up to $t_c$ honest
+		parties and, in addition, fully controls the behavior of up to
+		$t_a$ other parties. We show that for any fixed $t_c > 0$, and any fixed $t_a$, there exists an efficient protocol for
+		broadcast if and only if $2t_a
+		+ \min(t_a, t_c) &lt; n$. (When $t_c = 0$, standard results imply feasibility.)
+		We also show that if $t_c, t_a$ are not fixed, but are only guaranteed to satisfy the bound above, then
+		broadcast is impossible to achieve except for a few specific values of~$n$; for these ``exceptional'' values of~$n$,
+		we demonstrate a broadcast protocol.
+		Taken together, our results give a
+		complete characterization of this problem.
+		Invited for a special issue in Elsevier's Information and Computation journal.
+		
 		
 	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		Complete Fairness in Multi-Party Computation without an Honest Majority
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon and Jonathan Katz
+		</span>
+		<span class="venue">
+			Theory of Cryptography Conference, 2009
+		</span>
+	</div>
+	<div class="abstract">
+		Gordon et al.\ recently showed that certain (non-trivial) functions
+		can be computed with complete fairness in the
+		\emph{two-party} setting. Motivated by their results, we
+		initiate a study of complete fairness in the \emph{multi-party} case and
+		demonstrate the first completely-fair protocols for non-trivial
+		functions in this setting. We also provide evidence
+		that achieving fairness is "harder" in the multi-party setting, at
+		least with regard to round complexity.
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		Complete Fairness in Secure Two-Party Computation
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon and Jonathan Katz
+		</span>
+		<span class="venue">
+			ACM Symposium on Theory of Computing (STOC) 2008
+		</span>
+	</div>
+	<div class="abstract">
+		In the setting of secure two-party computation, two mutually
+		distrusting parties wish to compute some function of their inputs
+		while preserving, to the extent possible, various security
+		properties such as privacy, correctness, and more. One desirable
+		property is \emph{fairness}, which guarantees that if either party
+		receives its output, then the other party does too. Cleve
+		(STOC~1986) showed that complete fairness cannot be achieved
+		\emph{in general} in the two-party setting; specifically, he showed
+		(essentially) that it is impossible to compute Boolean XOR with
+		complete fairness. Since his work, the accepted folklore has been
+		that \emph{nothing} non-trivial can be computed with complete
+		fairness, and the question of complete fairness in secure two-party
+		computation has been treated as closed since the late '80s.
+
+		In this paper, we demonstrate that this widely held folklore belief
+		is \emph{false} by showing completely-fair secure protocols for
+		various non-trivial two-party functions including Boolean AND/OR as
+		well as Yao's ``millionaires' problem''. Surprisingly, we show that
+		it is even possible to construct completely-fair protocols for
+		certain functions containing an ``embedded XOR'', although in this
+		case we also prove a lower bound showing that a super-logarithmic
+		number of rounds are necessary. Our results demonstrate that the
+		question of completely-fair secure computation without an honest
+		majority is far from closed.
+	</div>
+	
+	<div class="publication">
+		<span class="title">
+		<a href="#">
+		Rational Secret Sharing, Revisited
+		</a>
+		</span>
+		<span class="authors">
+			Dov Gordon and Jonathan Katz
+		</span>
+		<span class="venue">
+			Security and Cryptography for Networks 2006
+		</span>
+	</div>
+	<div class="abstract">
+		We consider the problem of secret sharing among $n$ rational
+		players. This problem was introduced by Halpern and Teague (STOC
+		2004), who claim that a solution is \emph{impossible} for $n=2$ but
+		show a solution for the case $n\geq 3$. Contrary to their claim, we
+		show a protocol for rational secret sharing among $n=2$
+		players; our protocol extends to the case $n\geq 3$, where it is
+		simpler than the Halpern-Teague solution and also offers a number
+		of other advantages.  We also show how to avoid the continual involvement of the dealer,
+		in either our own protocol or that of Halpern and Teague.
+
+		Our techniques extend to the case of rational players trying to securely compute an arbitrary function, under certain
+		assumptions on the utilities of the players.
+	</div>
+	
 </div> <!-- end accordion div -->
 </div> <!-- end publications div -->
 
 
-<div id="Teaching" name="teaching">
+<div id="Teaching" >
 <h3>Teaching</h3>
 <ul>
 <li><a href="http://www.cs.umd.edu/~gordon/ysp">MATH 199</a> Math, Game Theory and the Theory of Games</li>
@@ -121,7 +350,7 @@ $(document).ready(function() {
 });
 
 
-var username = "dov";
+var username = "gordon";
 var hostname = "cs.maryland.edu";
 var email = username + "@" + hostname;
 document.getElementById("email").innerHTML = '<a href="mailto:' + email + '">' + email + '</a>'
